@@ -1,0 +1,35 @@
+# Byte-compiled / compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Telethon session
+*.session
+
+# Environment files
+.env
+*.env
+
+# VS Code settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Heroku local builds
+heroku-build/
+.heroku/
+
+# Docker
+*.log
+*.pid
+*.swp
+*.sock
+docker-compose.override.yml
+
+# Python virtualenv
+venv/
+env/
+
+# Pipenv
+Pipfile.lock

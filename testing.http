@@ -1,0 +1,10 @@
+### Test TradingView Alert Webhook
+POST http://localhost:8000/webhook
+Content-Type: application/json
+
+{
+  "symbol": "BTCUSD",
+  "price": "67000",
+  "time": "2025-04-15T12:34:56Z",
+  "signal": "Buy"
+}
