@@ -3,9 +3,6 @@ __pycache__/
 *.py[cod]
 *.so
 
-# Telethon session
-*.session
-
 # Environment files
 .env
 *.env
