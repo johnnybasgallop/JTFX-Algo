@@ -1,6 +1,7 @@
 import os
 from contextlib import asynccontextmanager
 
+import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request, requests, responses
 from telethon import TelegramClient

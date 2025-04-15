@@ -1,5 +1,5 @@
 ### Test TradingView Alert Webhook
-POST http://localhost:8000/webhook
+POST https://jtfx-algo-108173118287.herokuapp.com/webhook
 Content-Type: application/json
 
 {
