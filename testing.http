@@ -3,12 +3,9 @@ POST https://jtfx-algo-108173118287.herokuapp.com/webhook
 Content-Type: application/json
 
 {
-  "exchange": "BINANCE",
-  "ticker": "BTCUSD",
-  "signal": "SELL",
-  "price": "67000",
-  "volume": "3.5",
-  "time": "2025-04-15T12:34:56Z",
-  "interval": "1h",
-  "currency": "USD"
+  "signal": "BUY",
+  "ticker": "EURUSD",
+  "price": 1.08345,
+  "tp_pips": 50.00,
+  "sl_pips": 100.00
 }
