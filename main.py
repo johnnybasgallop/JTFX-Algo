@@ -56,7 +56,7 @@ def generate_trade_signal(data: dict) -> str:
     if ticker.endswith("JPY"):
         pip_value = 0.01
     else:
-        pip_value = 0.0001
+        pip_value = 0.00001
 
     # 3) Compute TP1, TP2, TP3, and SL
     #    We use 1×, 2×, 3× of ea_tp_pips, as is common for TP levels.
