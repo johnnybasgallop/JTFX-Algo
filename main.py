@@ -56,13 +56,13 @@ def generate_trade_signal(data: dict) -> str:
     if ticker.endswith("JPY"):
         pip_value = 0.01
     else:
-        pip_value = 0.0001
+        pip_value = 0.00001
 
     # 3) Compute TP1, TP2, TP3, and SL
     #    We use 1×, 2×, 3× of ea_tp_pips, as is common for TP levels.
     if signal == "BUY":
-        entry_low   = price - 0.5    # you can adjust this margin if you like
-        entry_high  = price - 1.5
+        entry_low   = price - 0.0005    # you can adjust this margin if you like
+        entry_high  = price - 0.001
 
         tp1 = round(price + ea_tp_pips * pip_value, 5 if not ticker.endswith("JPY") else 3)
         tp2 = round(price + (2 * ea_tp_pips) * pip_value, 5 if not ticker.endswith("JPY") else 3)
@@ -71,9 +71,8 @@ def generate_trade_signal(data: dict) -> str:
         sl  = round(price - ea_sl_pips * pip_value, 5 if not ticker.endswith("JPY") else 3)
 
     elif signal == "SELL":
-        entry_low   = price + 0.5
-        entry_high  = price + 1.5
-
+        entry_low   = price - 0.0005    # you can adjust this margin if you like
+        entry_high  = price - 0.001
         tp1 = round(price - ea_tp_pips * pip_value, 5 if not ticker.endswith("JPY") else 3)
         tp2 = round(price - (2 * ea_tp_pips) * pip_value, 5 if not ticker.endswith("JPY") else 3)
         tp3 = round(price - (3 * ea_tp_pips) * pip_value, 5 if not ticker.endswith("JPY") else 3)
