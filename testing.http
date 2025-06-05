@@ -6,6 +6,6 @@ Content-Type: application/json
   "signal": "BUY",
   "ticker": "EURUSD",
   "price": 1.08345,
-  "tp_pips": 50.00,
+  "tp_pips": 75.00,
   "sl_pips": 100.00
 }

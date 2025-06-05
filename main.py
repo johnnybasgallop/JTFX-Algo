@@ -54,11 +54,11 @@ def generate_trade_signal(data: dict) -> str:
 
     # 2) Determine pip_value: 0.0001 for non‐JPY, 0.01 for JPY pairs
     if ticker.endswith("JPY"):
-        pip_value = 0.001
-        decimals  = 4
+        pip_value = 0.01
+        decimals  = 3
     else:
-        pip_value = 0.00001
-        decimals  = 6
+        pip_value = 0.0001
+        decimals  = 5
 
     # 3) Compute TP1, TP2, TP3 (in “pips”), based on piecewise rules:
     #    - If TP < 75:    [TP, 2×TP, 3×TP]
