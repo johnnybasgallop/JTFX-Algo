@@ -85,6 +85,7 @@ def generate_trade_signal(data: dict) -> str:
     else:
         return "⚠️ Invalid signal received."
 
+
     # 4) Build the Telegram‐formatted message
     message = (
         f"🌟{signal} {ticker}🌟\n\n"
@@ -94,7 +95,16 @@ def generate_trade_signal(data: dict) -> str:
         f"TP3 – {tp3:.5f}\n\n"
         f"SL – {sl:.5f}\n\n"
         f"-AJ"
+    ) if not ticker.endswith("JPY") else (
+        f"🌟{signal} {ticker}🌟\n\n"
+        f"Entry – {entry_low:.3f} – {entry_high:.3f}\n\n"
+        f"TP1 – {tp1:.3f}\n"
+        f"TP2 – {tp2:.3f}\n"
+        f"TP3 – {tp3:.3f}\n\n"
+        f"SL – {sl:.3f}\n\n"
+        f"-AJ"
     )
+
     return message
 
 
