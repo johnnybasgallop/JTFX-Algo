@@ -67,8 +67,8 @@ def generate_trade_signal(data: dict) -> str:
         entry_high  = price + pip_value
 
         tp1 = round(price + ea_tp_pips * pip_value, 5 if not ticker.endswith("JPY") else 3)
-        tp2 = round(price + ea_tp_pips + (50 * pip_value) * pip_value, 5 if not ticker.endswith("JPY") else 3)
-        tp3 = round(price + ea_tp_pips + (50 * pip_value) * pip_value, 5 if not ticker.endswith("JPY") else 3)
+        tp2 = round(price + (ea_tp_pips + 50) * pip_value, 5 if not ticker.endswith("JPY") else 3)
+        tp3 = round(price + (ea_tp_pips + 100) * pip_value, 5 if not ticker.endswith("JPY") else 3)
 
         sl  = round(price - ea_sl_pips * pip_value, 5 if not ticker.endswith("JPY") else 3)
 
@@ -77,8 +77,8 @@ def generate_trade_signal(data: dict) -> str:
         entry_high  = price - pip_value
 
         tp1 = round(price - ea_tp_pips * pip_value, 5 if not ticker.endswith("JPY") else 3)
-        tp2 = round(price - ea_tp_pips - (50 * pip_value) * pip_value, 5 if not ticker.endswith("JPY") else 3)
-        tp3 = round(price - ea_tp_pips - (50 * pip_value) * pip_value, 5 if not ticker.endswith("JPY") else 3)
+        tp2 = round(price - (ea_tp_pips + 50) * pip_value, 5 if not ticker.endswith("JPY") else 3)
+        tp3 = round(price - (ea_tp_pips + 100) * pip_value, 5 if not ticker.endswith("JPY") else 3)
 
         sl  = round(price + ea_sl_pips * pip_value, 5 if not ticker.endswith("JPY") else 3)
 
