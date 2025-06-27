@@ -113,6 +113,7 @@ async def receive_webhook(request: Request):
     data = await request.json()
     signal_msg = generate_trade_signal(data)
     await client.send_message("jbasgallop", signal_msg)
+    await client.send_message("its_ajs", signal_msg)
     return {"status": "Message sent", "preview": signal_msg}
 
 
