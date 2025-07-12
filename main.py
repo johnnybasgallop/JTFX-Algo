@@ -102,7 +102,7 @@ def generate_trade_signal(data: dict) -> str:
         f"TP2 – {tp2:.3f}\n"
         f"TP3 – {tp3:.3f}\n\n"
         f"SL – {sl:.3f}\n\n"
-        f"-AJ"
+        f"-🤖"
     )
 
     return message
