@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "signal": "BUY",
-  "ticker": "USDJPY",
+  "ticker": "TestingSignalJPY",
   "price": 145.235,
   "tp_pips": 75,
   "sl_pips": 150.00
